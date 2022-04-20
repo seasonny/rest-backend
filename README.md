@@ -9,7 +9,7 @@
 #### mvn spring-boot:run -Dspring.profiles.active=mysql 
 
 
-
+docker buildx build  --platform linux/amd64,linux/arm64 --push -t quay.io/redhat_emp1/catch-java8:2.2 .
 
 #### Possible contributing ideas:
 1. spring boot with mysql or any other database

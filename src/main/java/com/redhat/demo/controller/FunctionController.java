@@ -2,6 +2,7 @@ package com.redhat.demo.controller;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
@@ -97,6 +98,13 @@ public class FunctionController {
 		 */
 
 		return messageSource.getMessage("good.morning", null, LocaleContextHolder.getLocale());
+	}
+	
+	
+	@RequestMapping(value = "/error", method = RequestMethod.GET)
+	public String getError() throws SQLException {
+	
+		throw new SQLException();
 	}
 
 	@RequestMapping(value = "/get-greeting-name", method = RequestMethod.GET)
