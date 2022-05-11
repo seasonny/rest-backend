@@ -1,5 +1,6 @@
 FROM registry.access.redhat.com/ubi8/openjdk-8:1.11-1.1648459552
-	 
+	
+USER root
 RUN cp /etc/passwd /home/jboss/passwd \
 && chmod ug+rwX /home/jboss /home/jboss/passwd
 
